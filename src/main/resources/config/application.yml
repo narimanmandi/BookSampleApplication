@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: simpleBookApplication
+    jpa:
+        open-in-view: true
+        properties:
+            hibernate:
+              show_sql: true
+        hibernate:
+            ddl-auto: update
+    datasource:
+        url: jdbc:mysql://localhost:3333/SimpleBook?allowPublicKeyRetrieval=true&useUnicode=yes&characterEncoding=UTF-8&characterSetResults=UTF-8&useSSL=false
+        username: root
+        password: Codeplus
+        hikari:
+            minimum-idle: 1
+            maximum-pool-size: 50
+            pool-name: BookApplicationPool
+            maxLifetime:  2000000
+            idleTimeout:  30000
+            connectionTimeout:  30000
+
+server:
+    port: 8087
+
+
+
+
+
