@@ -71,6 +71,8 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <executable>true</executable>
+                    <fork>true</fork>
                     <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
                 </configuration>
             </plugin>

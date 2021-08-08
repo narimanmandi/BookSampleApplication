@@ -29,13 +29,13 @@ public class BookResource {
     }
 
     @PostMapping
-    public ResponseEntity<Book> save(@RequestBody BookDto cardDto) {
-        return ResponseEntity.ok(bookService.save(BookMapper.INSTANCE.toEntity(cardDto)));
+    public ResponseEntity<Book> save(@RequestBody BookDto bookDto) {
+        return ResponseEntity.ok(bookService.save(BookMapper.INSTANCE.toEntity(bookDto)));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Book> edit(@RequestBody BookDto cardDto) {
-        return ResponseEntity.ok(bookService.save(BookMapper.INSTANCE.toEntity(cardDto)));
+    public ResponseEntity<Book> edit(@RequestBody BookDto bookDto) {
+        return ResponseEntity.ok(bookService.save(BookMapper.INSTANCE.toEntity(bookDto)));
     }
 
     @DeleteMapping("/{id}")
